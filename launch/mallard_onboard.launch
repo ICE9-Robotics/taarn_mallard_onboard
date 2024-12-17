@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find taarn_mallard_onboard)/launch/include/mallard.launch" />
+
+    <include file="$(find taarn_mallard_onboard)/launch/include/sick_tim.launch" />
+
+    <include file="$(find taarn_mallard_onboard)/launch/include/hector.launch" />
+
+    <include file="$(find microstrain_inertial_driver)/launch/microstrain.launch" />
+
+    <include file="$(find taarn_mallard_onboard)/launch/include/usb_cam.launch" />
+
+    <include file="$(find taarn_mallard_onboard)/launch/include/apriltag.launch" />
+</launch>

@@ -2,12 +2,14 @@
 
 # Dependencies
 
-Make sure all dependencies are configured according to the following guide before build the package.All of these packages need extra procedures or specific versions to work, apart from the `usb_cam`.
+Make sure all dependencies are configured according to the following guide before build the package.All of these packages need extra procedures or specific versions to work, apart from those via `apt install` routes.
 - MallARD
 - microstrain_inertial
 - hector_slam
 - mavros & mavlink
-- usb_cam (through `apt install` route)
+- usb_cam (`sudo apt install ros-melodic-usb-cam=0.3.7-1bionic.20230322.235948`)
+- apriltag_ros (`sudo apt install ros-melodic-apriltag-ros=3.2.1-1bionic.20221025.223206`)
+- sick_tim (`sudo apt install ros-melodic-sick-tim=0.0.17-1bionic.20230524.174840`)
 
 ## MallARD
 Xueliang modified MallARD on `Xueliang` branch
@@ -46,9 +48,13 @@ rm -r hector_geotiff hector_geotiff_plugins
 git clone -b 1.15.0 https://github.com/mavlink/mavros.git
 git clone -b 1.0.9 https://github.com/mavlink/mavlink.git
 ```
-## usb_cam
+
+## Others
+Install specific versions of the packages
 ```
-sudo apt install ros-$ROS_DISTRO-usb-cam
+sudo apt install ros-melodic-usb-cam=0.3.7-1bionic.20230322.235948
+sudo apt install ros-melodic-apriltag-ros=3.2.1-1bionic.20221025.223206
+sudo apt install ros-melodic-sick-tim=0.0.17-1bionic.20230524.174840
 ```
 
 # Build

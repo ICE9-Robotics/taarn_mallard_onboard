@@ -64,3 +64,6 @@ catkin build
 ```
 
 # Run
+```
+roslaunch taarn_mallard_onboard mallard_onboard.launch
+```

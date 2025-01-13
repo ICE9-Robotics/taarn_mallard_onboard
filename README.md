@@ -63,6 +63,13 @@ rosdep install --from-paths src -i -r
 catkin build
 ```
 
+# Udev rule
+```
+sudo cp install/99.camera.rules /etc/udev/rules.d/
+sudo udevadm control --reload-rules
+```
+After this, you need to re-plug in the camera's USB cable.
+
 # Run
 ```
 roslaunch taarn_mallard_onboard mallard_onboard.launch

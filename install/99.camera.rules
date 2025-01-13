@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="video4linux", ATTR{idVendor}=="05a3", ATTR{idProduct}=="9422", ATTR{index}=="0", SYMLINK+="camera1", MODE="0666"

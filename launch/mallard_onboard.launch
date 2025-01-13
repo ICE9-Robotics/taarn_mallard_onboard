@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <launch>
+    <include file="$(find taarn_mallard_onboard)/launch/include/mavros.launch"/>
+
     <include file="$(find taarn_mallard_onboard)/launch/include/mallard.launch" />
 
     <include file="$(find taarn_mallard_onboard)/launch/include/sick_tim.launch" />

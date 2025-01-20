@@ -2,9 +2,10 @@
 
 # Dependencies
 
-Make sure all dependencies are configured according to the following guide before build the package.All of these packages need extra procedures or specific versions to work, apart from those via `apt install` routes.
+Make sure all dependencies are configured according to the following guide before build the package. Some of these packages need extra procedures or specific versions to work. See below for installation instructions
 - MallARD
-- microstrain_inertial
+- visual_virtual_tether
+- [visual_virtual_tether](https://github.com/EEEManchester/visual_virtual_tether/tree/main)
 - hector_slam
 - mavros & mavlink
 - usb_cam (`sudo apt install ros-melodic-usb-cam=0.3.7-1bionic.20230322.235948`)
@@ -12,10 +13,11 @@ Make sure all dependencies are configured according to the following guide befor
 - sick_tim (`sudo apt install ros-melodic-sick-tim=0.0.17-1bionic.20230524.174840`)
 
 ## MallARD
-Xueliang modified MallARD on `Xueliang` branch
+ice9-dev branch (may later be merged into master)
 ```
-git clone -b Xueliang git@github.com:EEEManchester/MallARD.git
+git clone -b ice9-dev git@github.com:EEEManchester/MallARD.git
 ```
+
 ## microstrain_inertial
 ```
 git clone --recursive -b ba60f4a46f107a19ea7c321c44507198660fdcff https://github.com/LORD-MicroStrain/microstrain_inertial.git
@@ -27,11 +29,13 @@ git checkout ba60f4a46f107a19ea7c321c44507198660fdcff
 cd microstrain_inertial_driver/microstrain_inertial_driver_common/include/microstrain_inertial_driver_common
 git checkout 80378f949792743bdc15de1c549e7ff28d00004e
 ```
+
 ## hector_slam
 This is not the official hector_slam but modified for MallARD with added ros services for fixing map.
 ```
 git clone -b mallard https://github.com/EEEManchester/hector_slam.git
 ```
+
 #### Note
 If `catkin build` complains about QT version:
 ```

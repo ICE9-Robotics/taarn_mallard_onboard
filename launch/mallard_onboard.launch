@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <launch>
+    <arg name="camera" default="/dev/video0" />
+
     <include file="$(find taarn_mallard_onboard)/launch/include/mavros.launch"/>
 
     <include file="$(find taarn_mallard_onboard)/launch/include/mallard.launch" />
@@ -10,7 +12,14 @@
 
     <include file="$(find microstrain_inertial_driver)/launch/microstrain.launch" />
 
-    <include file="$(find taarn_mallard_onboard)/launch/include/usb_cam.launch" />
+    <include file="$(find taarn_mallard_onboard)/launch/include/usb_cam.launch" >
+        <arg name="camera" value="$(arg camera)" />
+    </include>
 
     <include file="$(find taarn_mallard_onboard)/launch/include/apriltag.launch" />
+
+    <!-- ds cap requires some python packages that fail to install on Mallard's PC. Run on base station instead until the issue is resolved. -->
+    <!-- <include file="$(find taarn_mallard_onboard)/launch/include/ds_cap.launch" /> -->
+
+    <include file="$(find taarn_mallard_onboard)/launch/include/virtual_tether.launch" />
 </launch>

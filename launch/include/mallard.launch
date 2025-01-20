@@ -3,10 +3,12 @@
     <arg name="model" default="$(find launch_config)/urdf/mallard_main_003_REAL.xacro"/>
     
     <group ns="mallard">
-        <node pkg="control_nodes" type="cmd2mav.py" name="Cmd2mav" output="screen"/>
+        <node pkg="control_nodes" type="cmd2mav.py" name="Cmd2mav" output="screen">
+            <param name="enable_attitude_control" value="false"/>
+            <param name="attitude_control/yaw_gain" value="0.5"/>
+        </node>
         <param name="robot_description" command="$(find xacro)/xacro $(arg model)"/>
         <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
         <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
     </group>
-    
 </launch>

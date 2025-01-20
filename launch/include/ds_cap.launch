@@ -1,0 +1,6 @@
+<launch>
+    <node name="ds_cap" pkg="ds_cap" type="ds_cap.py" output="screen">
+        <rosparam file="$(find taarn_mallard_onboard)/config/mallard_static.yaml" command="load" />
+    </node>
+	<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="tf_map2world" args="0 0 0 0 0 0 fcu world" /> -->
+</launch>

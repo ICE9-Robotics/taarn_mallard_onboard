@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-    <arg name="camera" default="/dev/video0" />
+    <arg name="camera" default="/dev/camera_down" />
 
     <include file="$(find taarn_mallard_onboard)/launch/include/mavros.launch"/>
 

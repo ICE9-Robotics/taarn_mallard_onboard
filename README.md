@@ -4,7 +4,6 @@
 
 Make sure all dependencies are configured according to the following guide before build the package. Some of these packages need extra procedures or specific versions to work. See below for installation instructions
 - MallARD
-- visual_virtual_tether
 - [visual_virtual_tether](https://github.com/EEEManchester/visual_virtual_tether/tree/main)
 - hector_slam
 - mavros & mavlink

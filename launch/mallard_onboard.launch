@@ -10,7 +10,9 @@
 
     <include file="$(find taarn_mallard_onboard)/launch/include/hector.launch" />
 
-    <include file="$(find microstrain_inertial_driver)/launch/microstrain.launch" />
+    <include file="$(find microstrain_inertial_driver)/launch/microstrain.launch" >
+        <arg name="params_file" value="$(find taarn_mallard_onboard)/config/microstrain.yaml" />
+    </include>
 
     <include file="$(find taarn_mallard_onboard)/launch/include/usb_cam.launch" >
         <arg name="camera" value="$(arg camera)" />

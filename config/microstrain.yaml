@@ -1,0 +1,2 @@
+publish_mount_to_frame_id_transform  : True
+mount_to_frame_id_transform          : [-0.23, 0.14, -0.007, 0, 0.7071, 0.7071, 0] # [ x, y, z, qi, qj, qk, qw ]

@@ -36,16 +36,30 @@ sudo apt install ros-melodic-sick-tim=0.0.17-1bionic.20230524.174840
 cd ..
 rosdep install --from-paths src -i -y
 catkin_make
+```
+
+Note if microstrain_inertial fail to build, try switching to an older commit and rebuild:
+```
+cd src/microstrain_inertial
+git checkout ba60f4a46f107a19ea7c321c44507198660fdcff
+cd microstrain_inertial_driver/microstrain_inertial_driver_common/include/microstrain_inertial_driver_common
+git checkout 80378f949792743bdc15de1c549e7ff28d00004e
+cd ..
+catkin_make
+```
+
+6. Source and config bashrc
+```
 source devel/setup.bash
 echo "source ~/devel/setup.bash" >> ~/.bashrc
 ```
 
-6. Copy udev rules
+7. Copy udev rules
 ```
 sudo cp src/taarn_mallard_onboard/install/99.camera.rules /etc/udev/rules.d/
 ```
 
-7. launch bluerov
+8. launch bluerov
 ```
 roslaunch taarn_mallard_onboard mallard_onboard.launch
 ```

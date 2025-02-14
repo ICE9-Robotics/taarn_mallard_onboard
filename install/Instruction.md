@@ -11,7 +11,6 @@ cd ~/mallard_ws/src
 git clone git@github.com:EEEManchester/taarn_mallard_onboard.git
 git clone -b ice9-dev git@github.com:EEEManchester/MallARD.git
 git clone git@github.com:EEEManchester/visual_virtual_tether.git
-git clone git@github.com:EEEManchester/taarn_mallard_onboard.git
 git clone --recursive -b ba60f4a46f107a19ea7c321c44507198660fdcff https://github.com/LORD-MicroStrain/microstrain_inertial.git
 git clone -b mallard https://github.com/EEEManchester/hector_slam.git
 git clone -b 1.15.0 https://github.com/mavlink/mavros.git

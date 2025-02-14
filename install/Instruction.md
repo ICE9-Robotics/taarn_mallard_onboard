@@ -9,7 +9,7 @@ cd ~/mallard_ws/src
 2. Clone all repositories
 ```
 git clone git@github.com:EEEManchester/taarn_mallard_onboard.git
-git clone -b ice9-dev git@github.com:ICE9-Robotics/MallARD.git
+git clone -b ice9-dev git@github.com:EEEManchester/MallARD.git
 git clone git@github.com:EEEManchester/visual_virtual_tether.git
 git clone git@github.com:EEEManchester/taarn_mallard_onboard.git
 git clone --recursive -b ba60f4a46f107a19ea7c321c44507198660fdcff https://github.com/LORD-MicroStrain/microstrain_inertial.git

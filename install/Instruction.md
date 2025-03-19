@@ -58,7 +58,7 @@ echo "source ~/devel/setup.bash" >> ~/.bashrc
 sudo cp src/taarn_mallard_onboard/install/99.camera.rules /etc/udev/rules.d/
 ```
 
-8. launch bluerov
+8. launch MallARD
 ```
 roslaunch taarn_mallard_onboard mallard_onboard.launch
 ```

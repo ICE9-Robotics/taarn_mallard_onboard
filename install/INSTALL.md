@@ -54,11 +54,8 @@ echo "source ~/devel/setup.bash" >> ~/.bashrc
 ```
 
 7. Copy udev rules
+Copy and apply udev rules for the downward facing camera. If a new camera is used, make sure udev rule is updated with the correct idVendor and idProduct.
 ```
 sudo cp src/taarn_mallard_onboard/install/99.camera.rules /etc/udev/rules.d/
-```
-
-8. launch MallARD
-```
-roslaunch taarn_mallard_onboard mallard_onboard.launch
+sudo udevadm control --reload-rules; sudo udevadm trigger
 ```

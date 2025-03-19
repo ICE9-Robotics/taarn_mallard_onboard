@@ -50,7 +50,7 @@ catkin_make
 6. Source and config bashrc
 ```
 source devel/setup.bash
-echo "source ~/devel/setup.bash" >> ~/.bashrc
+echo "source ~/mallard_ws/devel/setup.bash" >> ~/.bashrc
 ```
 
 7. Copy udev rules

@@ -1,4 +1,4 @@
-# Instructions
+# Install
 
 1. Make catkin workspace and cd into
 ```
@@ -15,6 +15,7 @@ git clone --recursive -b ba60f4a46f107a19ea7c321c44507198660fdcff https://github
 git clone -b mallard https://github.com/EEEManchester/hector_slam.git
 git clone -b 1.15.0 https://github.com/mavlink/mavros.git
 git clone -b 1.0.9 https://github.com/mavlink/mavlink.git
+git clone https://github.com/EEEManchester/apriltag_ros.git
 ```
 
 3. Remove some files from hector slam that we don't need but requires additional dependencies
@@ -26,7 +27,6 @@ rm -r hector_geotiff hector_geotiff_plugins
 4. Install standard ros packages
 ```
 sudo apt install ros-melodic-usb-cam=0.3.7-1bionic.20230322.235948
-sudo apt install ros-melodic-apriltag-ros=3.2.1-1bionic.20221025.223206
 sudo apt install ros-melodic-sick-tim=0.0.17-1bionic.20230524.174840
 ```
 
@@ -37,7 +37,7 @@ rosdep install --from-paths src -i -y
 catkin_make
 ```
 
-Note if microstrain_inertial fail to build, try switching to an older commit and rebuild:
+Note if microstrain_inertial fails to build, try switching to an older commit and rebuild:
 ```
 cd src/microstrain_inertial
 git checkout ba60f4a46f107a19ea7c321c44507198660fdcff
@@ -54,11 +54,8 @@ echo "source ~/devel/setup.bash" >> ~/.bashrc
 ```
 
 7. Copy udev rules
+Copy and apply udev rules for the downward facing camera. If a new camera is used, make sure udev rule is updated with the correct idVendor and idProduct.
 ```
 sudo cp src/taarn_mallard_onboard/install/99.camera.rules /etc/udev/rules.d/
-```
-
-8. launch bluerov
-```
-roslaunch taarn_mallard_onboard mallard_onboard.launch
+sudo udevadm control --reload-rules; sudo udevadm trigger
 ```

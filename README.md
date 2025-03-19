@@ -17,7 +17,7 @@ MallARD is set to udp 127.0.0.2:1455x
 
 Start SITL with:
 ```shell
-sim_vehicle.py --console -v ArduSub -f vectored_6dof --out=127.0.0.2:14550 -I1
+sim_vehicle.py --console -v ArduSub -f mallard --out=127.0.0.2:14550 -I1
 ```
 
 Type `output` in the terminal, you should see:

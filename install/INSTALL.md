@@ -1,4 +1,4 @@
-# Instructions
+# Install
 
 1. Make catkin workspace and cd into
 ```

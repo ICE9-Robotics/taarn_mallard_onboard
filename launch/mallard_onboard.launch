@@ -4,7 +4,7 @@
 
     <include file="$(find taarn_mallard_onboard)/launch/include/mallard.launch" />
 
-    <include file="$(find taarn_mallard_onboard)/launch/include/apriltag.launch" />
+    <!-- <include file="$(find taarn_mallard_onboard)/launch/include/apriltag.launch" />
 
-    <include file="$(find taarn_mallard_onboard)/launch/include/virtual_tether.launch" />
+    <include file="$(find taarn_mallard_onboard)/launch/include/virtual_tether.launch" /> -->
 </launch>

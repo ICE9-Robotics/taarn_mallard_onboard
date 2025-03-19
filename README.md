@@ -3,11 +3,7 @@
 # Dependencies
 - MallARD
 - visual_vertual_tether
-- microstrain_inertial
-- hector_slam
-- sick_tim
 - mavros & mavlink
-- usb_cam
 - apriltag_ros (UOM modified)
 
 # Install

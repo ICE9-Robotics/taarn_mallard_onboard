@@ -4,14 +4,9 @@
 
     <rosparam command="load" file="$(find taarn_mallard_onboard)/config/apriltag_ros_settings.yaml" ns="$(arg node_namespace)" />
     <rosparam command="load" file="$(find taarn_mallard_onboard)/config/apriltag_ros_tags.yaml" ns="$(arg node_namespace)" />
-    <node pkg="nodelet" type="nodelet" name="nodelet_service" args="manager" />
-    <node pkg="nodelet" type="nodelet" name="image_rectify_node" args="load image_proc/rectify nodelet_service">
-        <remap from="/image_mono" to="/usb_cam/image_raw" />
-        <remap from="/camera_info" to="/usb_cam/camera_info" />
-    </node>
     
     <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="apriltag_ros_continuous_node" clear_params="true" output="screen" >
-        <remap from="image_rect" to="/image_rect" />
+        <remap from="image_rect" to="/usb_cam/image_raw" />
         <remap from="camera_info" to="/usb_cam/camera_info" />
         <param name="publish_tag_detections_image" type="bool" value="true" />
     </node>
